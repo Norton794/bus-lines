@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system para Lins Bus - Paleta suave e moderna para transporte público
+Todas as cores são HSL para máxima flexibilidade
+*/
+
+@layer base {
+  :root {
+    /* Cores base - tons suaves de azul/verde para transporte */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
+
+    /* Cards com sutileza */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Primário - azul transporte moderno */
+    --primary: 205 100% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 205 100% 65%;
+
+    /* Secundário - verde suave */
+    --secondary: 142 35% 92%;
+    --secondary-foreground: 142 45% 25%;
+
+    /* Muted - cinza azulado */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    /* Accent - azul vibrante */
+    --accent: 205 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destrutivo */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Bordas e inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 205 100% 48%;
+
+    /* Cores especiais para destinos */
+    --fatec: 45 100% 65%;
+    --fatec-foreground: 45 95% 15%;
+    --etec: 215 100% 60%;
+    --etec-foreground: 0 0% 100%;
+    --estacao: 25 100% 60%;
+    --estacao-foreground: 0 0% 100%;
+    --cais: 145 60% 45%;
+    --cais-foreground: 0 0% 100%;
+    --bellagio: 180 70% 50%;
+    --bellagio-foreground: 0 0% 100%;
+
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Sombras */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
+    --shadow-medium: 0 8px 30px -8px hsl(var(--primary) / 0.15);
+
+    /* Transições */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Modo escuro - tons profundos mantendo a identidade do transporte */
+    --background: 215 30% 8%;
+    --foreground: 210 20% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 95%;
+
+    --primary: 205 100% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 205 100% 70%;
+
+    --secondary: 215 20% 20%;
+    --secondary-foreground: 210 20% 90%;
+
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 205 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 20%;
+    --ring: 205 100% 55%;
+
+    /* Cores especiais para destinos no modo escuro */
+    --fatec: 45 90% 70%;
+    --fatec-foreground: 45 95% 10%;
+    --etec: 215 100% 65%;
+    --etec-foreground: 0 0% 100%;
+    --estacao: 25 100% 65%;
+    --estacao-foreground: 0 0% 100%;
+    --cais: 145 60% 50%;
+    --cais-foreground: 0 0% 100%;
+    --bellagio: 180 70% 55%;
+    --bellagio-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
