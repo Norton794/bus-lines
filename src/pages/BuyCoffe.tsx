@@ -158,6 +158,42 @@ const SupportPage = () => {
             </Card>
           </div>
 
+           <div className="grid gap-4 md:grid-cols-1">
+{/* QR Code */}
+ <Card className="shadow-soft border-border hover:shadow-md transition-shadow">
+             <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-green-100 text-green-700">
+                    <QrCode className="h-5 w-5" />
+                  </div>
+                  QR CODE PIX
+                  <Badge variant="secondary" className="ml-auto">
+                    Instantâneo
+                  </Badge>
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                  <div className="pt-2 border-t border-border/50">
+                  <div className="bg-muted/50 rounded-lg p-3 space-y-2">
+                    
+                    <div className="flex justify-center">
+                      <div className="bg-white p-3 rounded-lg shadow-sm">
+                        <img 
+                          src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent('00020126580014BR.GOV.BCB.PIX01362fe60bf0-ca13-45bd-924d-1ca20296791d5204000053039865802BR5925Norton Augusto Herrero do6009SAO PAULO62140510yRGvrnryBg6304CE79')}`}
+                          alt="QR Code PIX"
+                          className="w-32 h-32"
+                        />
+                      </div>
+                    </div>
+                    <p className="text-xs text-muted-foreground text-center mt-2">
+                      Escaneie com a câmera do seu banco
+                    </p>
+                  </div>
+                  </div>
+                  </CardContent>
+                  </Card>
+          </div>
+
           {/* Valores sugeridos */}
           <Card className="shadow-soft border-border">
             <CardHeader className="pb-3">
